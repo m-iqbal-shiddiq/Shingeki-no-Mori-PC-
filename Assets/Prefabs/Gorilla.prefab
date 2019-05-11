@@ -1594,13 +1594,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7660481311858440908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8da33d2e0531b8498bb4cd6735fa301, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ec2f9e55dd85b04791e27f47eb4352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTag: Enemy
-  area: 10
+  area: 15
   Rotate: {fileID: 2007543735112498875}
+  turnSpeed: 10
 --- !u!1 &7660481311858440910
 GameObject:
   m_ObjectHideFlags: 0
