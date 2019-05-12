@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0.5254902, b: 0, a: 0}
-  rotationOffset: {x: -90, y: 0, z: 0, w: 0}
-  positionOffset: {x: 0, y: 0.1, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+  positionOffset: {x: 0, y: 0.2, z: -0.02}
