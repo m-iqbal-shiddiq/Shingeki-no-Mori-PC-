@@ -1556,8 +1556,9 @@ MonoBehaviour:
   Rotate: {fileID: 2007543735112498875}
   turnSpeed: 10
   rateFire: 1
-  bonePrefab: {fileID: 0}
-  pointFire: {fileID: 0}
+  bonePrefab: {fileID: 4515125769069027221, guid: bf5b3a38a289a0f4cbeb7bc97f83c960,
+    type: 3}
+  pointFire: {fileID: 7828921191239696956}
 --- !u!1 &7660481311858440910
 GameObject:
   m_ObjectHideFlags: 0
