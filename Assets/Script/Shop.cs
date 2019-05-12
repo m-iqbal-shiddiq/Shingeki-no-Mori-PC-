@@ -15,8 +15,8 @@ public class Shop : MonoBehaviour
         buildManager.SetAnimalBuild(buildManager.GorillaPrefab);
     }
 
-    public void BuyAnother()
+    public void BuySpider()
     {
-        buildManager.SetAnimalBuild(buildManager.AnotherPrefab);
+        buildManager.SetAnimalBuild(buildManager.SpiderPrefab);
     }
 }

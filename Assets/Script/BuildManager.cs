@@ -17,6 +17,8 @@ public class BuildManager : MonoBehaviour
 
     public GameObject AnotherPrefab;
 
+    public GameObject SpiderPrefab;
+
     private GameObject animalToSpawn;
 
     public GameObject GetAnimalToSpawn()
