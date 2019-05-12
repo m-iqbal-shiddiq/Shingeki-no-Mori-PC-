@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 284592379}
   - component: {fileID: 284592378}
   - component: {fileID: 284592380}
+  - component: {fileID: 284592381}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -606,6 +607,19 @@ MonoBehaviour:
   AnotherPrefab: {fileID: 0}
   SpiderPrefab: {fileID: 2286541186087631072, guid: bf2303d6425c1384caa68ea8c186dc96,
     type: 3}
+--- !u!114 &284592381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284592377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3d968ea9866404d8af8a512a11ced4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGold: 400
 --- !u!1001 &296219817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,6 +822,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276826238a9c6ac4691d564d34ca4636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Gorilla:
+    prefab: {fileID: 7660481311858440908, guid: 4de25e8238a7a8647a4d422ddd5f0103,
+      type: 3}
+    cost: 100
+  Spider:
+    prefab: {fileID: 2286541186087631072, guid: bf2303d6425c1384caa68ea8c186dc96,
+      type: 3}
+    cost: 300
 --- !u!114 &307212612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,7 +4827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 307212611}
-        m_MethodName: BuyGorilla
+        m_MethodName: SelectGorilla
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6577,7 +6599,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 307212611}
-        m_MethodName: BuySpider
+        m_MethodName: SelectSpider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

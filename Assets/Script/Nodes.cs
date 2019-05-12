@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Nodes : MonoBehaviour
 {
-    private GameObject animal;
+    public GameObject animal;
     public Color hoverColor;
     private Renderer Rend;
     private Color startColor;
@@ -18,6 +18,11 @@ public class Nodes : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
+    public Vector3 GetAnimalPosition()
+    {
+        return transform.position + positionOffset;
+    }
+
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -25,7 +30,7 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        if (buildManager.GetAnimalToSpawn() == null)
+        if (!buildManager.canBuild)
         {
             return;
         }
@@ -40,7 +45,7 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        if (buildManager.GetAnimalToSpawn() == null)
+        if (!buildManager.canBuild)
         {
             return;
         }
@@ -50,8 +55,7 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        GameObject animalToSpawn = buildManager.GetAnimalToSpawn();
-        animal = (GameObject)Instantiate(animalToSpawn, transform.position+positionOffset, rotationOffset);
+        buildManager.SpawnAnimalOn(this);
     }
 
     private void OnMouseExit()

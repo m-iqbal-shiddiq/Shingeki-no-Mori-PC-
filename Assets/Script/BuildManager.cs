@@ -19,14 +19,25 @@ public class BuildManager : MonoBehaviour
 
     public GameObject SpiderPrefab;
 
-    private GameObject animalToSpawn;
+    private AnimalBlueprint animalToSpawn;
 
-    public GameObject GetAnimalToSpawn()
+    public bool canBuild { get { return animalToSpawn != null;  } }
+
+    public void SpawnAnimalOn(Nodes node)
     {
-        return animalToSpawn;
+        if (StatsPlayer.Gold < animalToSpawn.cost)
+        {
+            return;
+        }
+        StatsPlayer.Gold -= animalToSpawn.cost;
+
+        GameObject animal = (GameObject)Instantiate(animalToSpawn.prefab, node.GetAnimalPosition(), Quaternion.identity);
+        node.animal = animal;
+
+        Debug.Log("Hei" + StatsPlayer.Gold);
     }
     
-    public void SetAnimalBuild(GameObject animal)
+    public void SetAnimalBuild(AnimalBlueprint animal)
     {
         animalToSpawn = animal;
     }

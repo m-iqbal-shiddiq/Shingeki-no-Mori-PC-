@@ -6,17 +6,20 @@ public class Shop : MonoBehaviour
 {
     BuildManager buildManager;
 
+    public AnimalBlueprint Gorilla;
+    public AnimalBlueprint Spider;
+
     private void Start()
     {
         buildManager = BuildManager.instance;
     }
-    public void BuyGorilla()
+    public void SelectGorilla()
     {
-        buildManager.SetAnimalBuild(buildManager.GorillaPrefab);
+        buildManager.SetAnimalBuild(Gorilla);
     }
 
-    public void BuySpider()
+    public void SelectSpider()
     {
-        buildManager.SetAnimalBuild(buildManager.SpiderPrefab);
+        buildManager.SetAnimalBuild(Spider);
     }
 }
