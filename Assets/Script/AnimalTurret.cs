@@ -13,6 +13,13 @@ public class AnimalTurret : MonoBehaviour
     public Transform Rotate;
 
     public float turnSpeed = 10f;
+
+    public float rateFire = 1f;
+    private float countdownFire = 0f;
+
+    public GameObject bonePrefab;
+    public Transform pointFire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +38,25 @@ public class AnimalTurret : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotation = Quaternion.Lerp(Rotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         Rotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if( countdownFire <= 0f)
+        {
+            Shooting();
+            countdownFire = 1f / rateFire;
+        }
+        countdownFire -= Time.deltaTime;
     } 
+
+    void Shooting()
+    {
+        GameObject bulletGameObject = (GameObject)Instantiate(bonePrefab, pointFire.position, pointFire.rotation);
+        Bullet bullet = bulletGameObject.GetComponent<Bullet>();
+
+        if(bullet != null)
+        {
+            bullet.Seek(target);
+        }
+    }
 
     void targetUpdate()
     {
