@@ -13,18 +13,20 @@ public class BuildManager : MonoBehaviour
         instance = this;
 
     }
-    public GameObject standardAnimalPrefab;
+    public GameObject GorillaPrefab;
 
-    void Start()
-    {
-        animalToSpawn = standardAnimalPrefab;
-    }
+    public GameObject AnotherPrefab;
 
     private GameObject animalToSpawn;
+
     public GameObject GetAnimalToSpawn()
     {
         return animalToSpawn;
     }
-    // Start is called before the first frame update
+    
+    public void SetAnimalBuild(GameObject animal)
+    {
+        animalToSpawn = animal;
+    }
 
 }
