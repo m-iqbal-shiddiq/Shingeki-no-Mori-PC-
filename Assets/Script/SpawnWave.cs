@@ -24,7 +24,8 @@ public class SpawnWave : MonoBehaviour
             countdown = selangWave;
         }
         countdown -= Time.deltaTime;
-        waveText.text = Mathf.Floor(countdown).ToString();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveText.text = string.Format("{0:00.00}", countdown);
     }
 
     IEnumerator Spawn()

@@ -19,9 +19,12 @@ public class BuildManager : MonoBehaviour
 
     public GameObject SpiderPrefab;
 
+    public GameObject buildEffect;
+
     private AnimalBlueprint animalToSpawn;
 
     public bool canBuild { get { return animalToSpawn != null;  } }
+    public bool hasGold { get { return StatsPlayer.Gold >= animalToSpawn.cost; } }
 
     public void SpawnAnimalOn(Nodes node)
     {
@@ -33,6 +36,10 @@ public class BuildManager : MonoBehaviour
 
         GameObject animal = (GameObject)Instantiate(animalToSpawn.prefab, node.GetAnimalPosition(), Quaternion.identity);
         node.animal = animal;
+
+        GameObject bEffect = (GameObject)Instantiate(buildEffect, node.GetAnimalPosition(), Quaternion.identity);
+
+        Destroy(bEffect, 5f);
 
         Debug.Log("Hei" + StatsPlayer.Gold);
     }

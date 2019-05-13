@@ -5,6 +5,7 @@ public class Nodes : MonoBehaviour
 {
     public GameObject animal;
     public Color hoverColor;
+    public Color havenotGoldColor;
     private Renderer Rend;
     private Color startColor;
     public Quaternion rotationOffset;
@@ -35,7 +36,13 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        Rend.material.color = hoverColor;
+        if (buildManager.hasGold)
+        {
+            Rend.material.color = hoverColor;
+        } else
+        {
+            Rend.material.color = havenotGoldColor;
+        }
     }
 
     private void OnMouseDown()

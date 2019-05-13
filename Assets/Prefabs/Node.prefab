@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc149bfab841924dad7a49ed648692c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animal: {fileID: 0}
   hoverColor: {r: 0, g: 0.5254902, b: 0, a: 0}
+  havenotGoldColor: {r: 0.990566, g: 0.032707386, b: 0.032707386, a: 0}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   positionOffset: {x: 0, y: 0.2, z: -0.2}
