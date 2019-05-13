@@ -15,8 +15,7 @@ public class BuildManager : MonoBehaviour
     }
     public GameObject GorillaPrefab;
 
-    public GameObject AnotherPrefab;
-
+    public GameObject SnakePrefab;
     public GameObject SpiderPrefab;
 
     public GameObject buildEffect;

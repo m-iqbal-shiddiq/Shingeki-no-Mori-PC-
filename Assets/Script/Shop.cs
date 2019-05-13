@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour
 
     public AnimalBlueprint Gorilla;
     public AnimalBlueprint Spider;
+    public AnimalBlueprint Snake;
 
     private void Start()
     {
@@ -21,5 +22,10 @@ public class Shop : MonoBehaviour
     public void SelectSpider()
     {
         buildManager.SetAnimalBuild(Spider);
+    }
+
+    public void SelectSnake()
+    {
+        buildManager.SetAnimalBuild(Snake);
     }
 }
