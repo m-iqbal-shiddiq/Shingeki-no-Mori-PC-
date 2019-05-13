@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 9124952031811660303, guid: ebf99c59adbe8334186fb486c32e22be,
+        type: 3}
+      propertyPath: explodeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124952031811660303, guid: ebf99c59adbe8334186fb486c32e22be,
+        type: 3}
+      propertyPath: efekBullet
+      value: 
+      objectReference: {fileID: 7503470391102259655, guid: 763dc486b7026ad4bad2b6187f93e0fc,
+        type: 3}
     - target: {fileID: 2195484982942806283, guid: ebf99c59adbe8334186fb486c32e22be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,16 +93,5 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 9124952031811660303, guid: ebf99c59adbe8334186fb486c32e22be,
-        type: 3}
-      propertyPath: explodeRadius
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124952031811660303, guid: ebf99c59adbe8334186fb486c32e22be,
-        type: 3}
-      propertyPath: efekBullet
-      value: 
-      objectReference: {fileID: 7503470391102259655, guid: 2db3d1b77416a294784a46803c7321e0,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf99c59adbe8334186fb486c32e22be, type: 3}

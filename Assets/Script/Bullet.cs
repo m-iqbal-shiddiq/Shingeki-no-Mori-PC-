@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
         {
             if (collider.tag == "Enemy")
             {
-                Debug.Log("mana woi");
+          
                 Damage(collider.transform);
             }     
         }

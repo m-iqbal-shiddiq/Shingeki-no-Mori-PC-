@@ -22,7 +22,9 @@ public class AnimalTurret : MonoBehaviour
 
     [Header("Laser Bullet")]
     public bool useLaser = false;
-    public LineRenderer lineRenderer; 
+    public LineRenderer lineRenderer;
+    public ParticleSystem laserImpact;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class AnimalTurret : MonoBehaviour
                 if (lineRenderer.enabled)
                 {
                     lineRenderer.enabled = false;
+                    laserImpact.Stop();
                 }
             }
 
@@ -75,9 +78,16 @@ public class AnimalTurret : MonoBehaviour
     void Laser()
     {
         if (!lineRenderer.enabled)
+        {
             lineRenderer.enabled = true;
+            laserImpact.Play();
+        }
         lineRenderer.SetPosition(0, pointFire.position);
         lineRenderer.SetPosition(1, target.position);
+
+        Vector3 direction = pointFire.position - target.position;
+        laserImpact.transform.position = target.position + direction.normalized;
+        laserImpact.transform.rotation = Quaternion.LookRotation(direction);
     }
     void Shooting()
     {
