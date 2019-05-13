@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AnimalTurret : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
+    private Enemy enemyTarget;
 
     public string enemyTag = "Enemy";
     [Header("Setup Fields")]
@@ -24,6 +25,8 @@ public class AnimalTurret : MonoBehaviour
     public bool useLaser = false;
     public LineRenderer lineRenderer;
     public ParticleSystem laserImpact;
+    public int damageOverTime = 30;
+    public float slowPst = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +80,9 @@ public class AnimalTurret : MonoBehaviour
 
     void Laser()
     {
+        enemyTarget.GetComponent<Enemy>().TakeDamage(damageOverTime * Time.deltaTime);
+        enemyTarget.Slow(slowPst);
+      
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
@@ -119,6 +125,7 @@ public class AnimalTurret : MonoBehaviour
         if(enemyTerdekat != null && jarakTerpendek <= area)
         {
             target = enemyTerdekat.transform;
+            enemyTarget = enemyTerdekat.GetComponent<Enemy>();
         } else
         {
             target = null;
