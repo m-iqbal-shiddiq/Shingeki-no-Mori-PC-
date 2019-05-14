@@ -13,7 +13,8 @@
 - Adobe Photoshop & Illustrator
 
 ## Diagram
+### Activity Diagram
 
-<img src=https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png>
+<align = "center"><img src=https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png>
 
 Game untuk tugas akhir PSBO
