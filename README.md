@@ -14,7 +14,7 @@
 
 ## Diagram
 ### Activity Diagram
-<align="center"><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png">
+<img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png">
 
 ### Use Case Diagram
 <img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/PSBO_SnM.png">
