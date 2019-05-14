@@ -12,6 +12,8 @@
 - Blender
 - Adobe Photoshop & Illustrator
 
-##
+## Diagram
+
+https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png
 
 Game untuk tugas akhir PSBO
