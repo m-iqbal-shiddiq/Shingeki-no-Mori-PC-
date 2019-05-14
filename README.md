@@ -14,12 +14,12 @@
 
 ## Diagram
 ### Activity Diagram
-<align="center><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png">
+<align="center"><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png">
 
 ### Use Case Diagram
-<align="center><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/PSBO_SnM.png">
+<align="center"><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/PSBO_SnM.png">
 
 ### Class Diagram
-<align="center><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Class%20Diagram_SnM_2.png">
+<align="center"><img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Class%20Diagram_SnM_2.png">
 
 Game untuk tugas akhir PSBO
