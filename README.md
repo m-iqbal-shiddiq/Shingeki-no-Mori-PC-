@@ -17,4 +17,6 @@
 
 <align = "center"><img src=https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Activity%20Diagram_SnM.png>
 
+<align = "center"><img src=https://drive.google.com/open?id=12LsQ1OdTNUNsvTAHfGVDQqXZE5IFb3ky>
+
 Game untuk tugas akhir PSBO
