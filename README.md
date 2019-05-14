@@ -19,7 +19,4 @@
 ### Use Case Diagram
 <img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/PSBO_SnM.png">
 
-### Class Diagram
-<img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Class%20Diagram_SnM_2.png">
-
 Game untuk tugas akhir PSBO
