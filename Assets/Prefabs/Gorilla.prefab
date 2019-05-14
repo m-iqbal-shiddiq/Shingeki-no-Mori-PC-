@@ -119,7 +119,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2007543735112498874}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -1550,15 +1550,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec2f9e55dd85b04791e27f47eb4352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   enemyTag: Enemy
   area: 15
-  Rotate: {fileID: 2007543735112498875}
-  turnSpeed: 10
-  rateFire: 1
   bonePrefab: {fileID: 4515125769069027221, guid: bf5b3a38a289a0f4cbeb7bc97f83c960,
     type: 3}
   pointFire: {fileID: 7828921191239696956}
+  Rotate: {fileID: 2007543735112498875}
+  turnSpeed: 10
+  rateFire: 1
+  useLaser: 0
+  lineRenderer: {fileID: 0}
+  laserImpact: {fileID: 0}
+  damageOverTime: 30
+  slowPst: 0.5
 --- !u!1 &7660481311858440910
 GameObject:
   m_ObjectHideFlags: 0

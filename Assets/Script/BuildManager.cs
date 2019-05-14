@@ -21,6 +21,9 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
 
     private AnimalBlueprint animalToSpawn;
+    private Nodes selectedNode;
+
+    public NodeUI nodeUI; 
 
     public bool canBuild { get { return animalToSpawn != null;  } }
     public bool hasGold { get { return StatsPlayer.Gold >= animalToSpawn.cost; } }
@@ -43,9 +46,28 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Hei" + StatsPlayer.Gold);
     }
     
+    public void SelectNode(Nodes node)
+    {
+        if (selectedNode == node)
+        {
+            DeselectNode();
+            return;
+        }
+        selectedNode = node;
+        animalToSpawn = null;
+
+        nodeUI.SetTarget(node);
+        
+    }
+    
     public void SetAnimalBuild(AnimalBlueprint animal)
     {
         animalToSpawn = animal;
+        DeselectNode();
     }
-
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
+    }
 }

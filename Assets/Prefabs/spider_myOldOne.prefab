@@ -74,15 +74,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec2f9e55dd85b04791e27f47eb4352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   enemyTag: Enemy
   area: 15
-  Rotate: {fileID: 102847401226185603}
-  turnSpeed: 10
-  rateFire: 0.1
   bonePrefab: {fileID: 1974001908777489057, guid: 1c2acf0e42ba58f41b3dfe627cea22d2,
     type: 3}
   pointFire: {fileID: 5132224610390172704}
+  Rotate: {fileID: 102847401226185603}
+  turnSpeed: 10
+  rateFire: 0.1
+  useLaser: 0
+  lineRenderer: {fileID: 0}
+  laserImpact: {fileID: 0}
+  damageOverTime: 30
+  slowPst: 0.5
 --- !u!1 &4029550808396242289
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +176,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4029550808396242289}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -184,6 +188,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 102847401226185603}
     m_Modifications:
+    - target: {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
+      propertyPath: m_Name
+      value: spider_myOldOne
+      objectReference: {fileID: 0}
     - target: {fileID: 400140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.009000005
@@ -239,10 +247,6 @@ PrefabInstance:
     - target: {fileID: 400140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.450611
-      objectReference: {fileID: 0}
-    - target: {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-      propertyPath: m_Name
-      value: spider_myOldOne
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
       propertyPath: m_PlayAutomatically

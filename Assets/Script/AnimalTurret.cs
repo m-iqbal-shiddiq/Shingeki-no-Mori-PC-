@@ -132,9 +132,5 @@ public class AnimalTurret : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, area);
-    }
+    
 }

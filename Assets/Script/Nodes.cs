@@ -59,6 +59,7 @@ public class Nodes : MonoBehaviour
 
         if (animal != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 

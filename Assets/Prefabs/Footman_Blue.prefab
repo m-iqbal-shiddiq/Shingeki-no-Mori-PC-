@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af1fbcbdee25684186f19a565598074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpeed: 5
   speed: 5
   deadeff: {fileID: 5511024654275779483, guid: e7a215ff8b7bbc742be078b317e7fb94, type: 3}
   health: 100
