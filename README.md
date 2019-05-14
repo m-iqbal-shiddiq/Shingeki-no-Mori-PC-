@@ -9,8 +9,6 @@
 ## Lingkungan Pengembangan
 - OS Windows
 - Unity
-- Blender
-- Adobe Photoshop & Illustrator
 
 ## Diagram
 ### Activity Diagram
