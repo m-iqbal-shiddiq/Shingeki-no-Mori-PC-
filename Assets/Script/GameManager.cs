@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public static bool GameisOver ;
+
+    public GameObject gameoverUI;
+
+    //Fungsi saat scene jalan
+    private void Start()
+    {
+        GameisOver = false;
+
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-        if (gameEnded)
+        if (GameisOver)
         {
             return; 
         }
@@ -20,7 +31,8 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        gameEnded = true;
+        GameisOver = true;
         Debug.Log("and I am Iron Man");
+        gameoverUI.SetActive(true);
     }
 }

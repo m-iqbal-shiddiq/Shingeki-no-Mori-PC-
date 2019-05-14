@@ -10,10 +10,14 @@ public class StatsPlayer : MonoBehaviour
     public static int Lives;
     public int startLives = 20;
 
+
+    public static int Wave = 0;
+
     private void Start()
     {
         Gold = startGold;
         Lives = startLives;
+        Wave = 0;
     }
 
 
