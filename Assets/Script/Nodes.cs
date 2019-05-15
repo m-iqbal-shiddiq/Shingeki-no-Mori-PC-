@@ -3,7 +3,13 @@ using UnityEngine;
 
 public class Nodes : MonoBehaviour
 {
+    [HideInInspector]
     public GameObject animal;
+    [HideInInspector]
+    public AnimalBlueprint animalBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
+
     public Color hoverColor;
     public Color havenotGoldColor;
     private Renderer Rend;
@@ -22,6 +28,26 @@ public class Nodes : MonoBehaviour
     public Vector3 GetAnimalPosition()
     {
         return transform.position + positionOffset;
+    }
+
+    void spawnAnimal(AnimalBlueprint blueprint)
+    {
+        if (StatsPlayer.Gold < blueprint.cost)
+        {
+            return;
+        }
+        StatsPlayer.Gold -= blueprint.cost;
+
+        GameObject _animal = (GameObject)Instantiate(blueprint.prefab, GetAnimalPosition(), Quaternion.identity);
+        animal = _animal;
+
+        animalBlueprint = blueprint;
+
+        GameObject bEffect = (GameObject)Instantiate(buildManager.buildEffect, GetAnimalPosition(), Quaternion.identity);
+
+        Destroy(bEffect, 3f);
+
+        Debug.Log("Hei" + StatsPlayer.Gold);
     }
 
     private void OnMouseEnter()
@@ -63,7 +89,28 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        buildManager.SpawnAnimalOn(this);
+        spawnAnimal(buildManager.GetAnimaltoSpawn());
+    }
+
+    public void UpgradeAnimal()
+    {
+        if (StatsPlayer.Gold < animalBlueprint.upgradeCost)
+        {
+            return;
+        }
+        StatsPlayer.Gold -= animalBlueprint.upgradeCost;
+
+        Destroy(animal);
+
+        GameObject _animal = (GameObject)Instantiate(animalBlueprint.upgradedPrefab, GetAnimalPosition(), Quaternion.identity);
+        animal = _animal;
+
+        GameObject bEffect = (GameObject)Instantiate(buildManager.buildEffect, GetAnimalPosition(), Quaternion.identity);
+
+        Destroy(bEffect, 3f);
+        isUpgraded = true;
+
+        Debug.Log("Upgrade");
     }
 
     private void OnMouseExit()
