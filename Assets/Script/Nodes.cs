@@ -112,6 +112,7 @@ public class Nodes : MonoBehaviour
         Destroy(sEffect, 3f);
         Destroy(animal);
         animalBlueprint = null;
+        isUpgraded = false;
     }
 
     //Warna node saat pointer keluar
