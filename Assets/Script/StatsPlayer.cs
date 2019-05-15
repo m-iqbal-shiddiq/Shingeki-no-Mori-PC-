@@ -13,6 +13,7 @@ public class StatsPlayer : MonoBehaviour
 
     public static int Wave = 0;
 
+    // Deklarasi stat player saat mulai
     private void Start()
     {
         Gold = startGold;

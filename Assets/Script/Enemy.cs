@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
         speed = startSpeed;
     }
 
+    // Menerima serangan dari animal
     public void TakeDamage(float amount)
     {
         health -= amount;
@@ -27,11 +28,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // Memperlambat gara-gara laser
     public void Slow(float pst)
     {
         speed = startSpeed * (1f - pst);
     }
 
+    // Enemy mati
     void Die()
     {
         StatsPlayer.Gold += valueGain;
@@ -41,5 +44,4 @@ public class Enemy : MonoBehaviour
 
         Destroy(gameObject);
     }
-
 }

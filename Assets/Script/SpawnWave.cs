@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SpawnWave : MonoBehaviour
 {
     public Transform enemyPrefab;
-
     public Transform pointSpawn;
 
     public float selangWave = 5f;
@@ -28,6 +27,7 @@ public class SpawnWave : MonoBehaviour
         waveText.text = string.Format("{0:00.00}", countdown);
     }
 
+    // Increment Spawn Enemy
     IEnumerator Spawn()
     {
         numberWave++;
@@ -39,6 +39,7 @@ public class SpawnWave : MonoBehaviour
         }
     }
 
+    // Memanggil Enemy
     void EnemySpawn()
     {
         Instantiate(enemyPrefab, pointSpawn.position, pointSpawn.rotation);

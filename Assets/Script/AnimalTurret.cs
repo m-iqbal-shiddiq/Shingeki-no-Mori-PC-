@@ -28,13 +28,11 @@ public class AnimalTurret : MonoBehaviour
     public int damageOverTime = 30;
     public float slowPst = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("targetUpdate", 0f, 0.5f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(target == null)
@@ -47,12 +45,9 @@ public class AnimalTurret : MonoBehaviour
                     laserImpact.Stop();
                 }
             }
-
             return;
         }
-        //Lock On
         LockOnTarget();
-
         if (useLaser)
         {
             Laser();
@@ -66,18 +61,18 @@ public class AnimalTurret : MonoBehaviour
             }
             countdownFire -= Time.deltaTime;
         }
-
     } 
 
+    // Mengunci Target
     void LockOnTarget()
     {
         Vector3 direction = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotation = Quaternion.Lerp(Rotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         Rotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-
     }
 
+    // Menembak Laser
     void Laser()
     {
         enemyTarget.GetComponent<Enemy>().TakeDamage(damageOverTime * Time.deltaTime);
@@ -95,6 +90,8 @@ public class AnimalTurret : MonoBehaviour
         laserImpact.transform.position = target.position + direction.normalized;
         laserImpact.transform.rotation = Quaternion.LookRotation(direction);
     }
+
+    // Menembak bone
     void Shooting()
     {
         GameObject bulletGameObject = (GameObject)Instantiate(bonePrefab, pointFire.position, pointFire.rotation);
@@ -106,6 +103,7 @@ public class AnimalTurret : MonoBehaviour
         }
     }
 
+    // Update target terdekat
     void targetUpdate()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -121,7 +119,6 @@ public class AnimalTurret : MonoBehaviour
                 enemyTerdekat = enemy;
             }
         }
-
         if(enemyTerdekat != null && jarakTerpendek <= area)
         {
             target = enemyTerdekat.transform;
@@ -131,6 +128,4 @@ public class AnimalTurret : MonoBehaviour
             target = null;
         }
     }
-
-    
 }

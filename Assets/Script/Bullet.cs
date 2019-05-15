@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     public int damage = 50;
     public float speed = 70f;
     public float explodeRadius = 0f;
+
     public GameObject efekBullet;
 
     public void Seek(Transform target_)
@@ -16,7 +17,6 @@ public class Bullet : MonoBehaviour
         target = target_;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(target == null)
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+ 
         Vector3 direction = target.position - transform.position;
         float jarakFrame = speed * Time.deltaTime;
 
@@ -33,13 +33,10 @@ public class Bullet : MonoBehaviour
             hitTarget();
             return;
         }
-
         transform.Translate(direction.normalized * jarakFrame, Space.World);
-        
-
-
     }
 
+    // memberikan serangan ke enemy
     void hitTarget()
     {
         GameObject effectGO = (GameObject)Instantiate(efekBullet, transform.position, transform.rotation);
@@ -55,8 +52,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
-
+    // menembak missile
     void Explode()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explodeRadius);
@@ -64,11 +60,12 @@ public class Bullet : MonoBehaviour
         {
             if (collider.tag == "Enemy")
             {
-          
                 Damage(collider.transform);
             }     
         }
     }
+
+    // Memberi damage ke enemy
     void Damage(Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
@@ -77,10 +74,5 @@ public class Bullet : MonoBehaviour
         {
             e.TakeDamage(damage);
         }
-
-       
     }
-    
-
-
 }

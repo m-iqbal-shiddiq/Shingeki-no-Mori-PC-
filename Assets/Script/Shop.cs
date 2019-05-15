@@ -14,16 +14,20 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
     }
+
+    //Milih Gorilla
     public void SelectGorilla()
     {
         buildManager.SetAnimalBuild(Gorilla);
     }
 
+    //Milih Spider
     public void SelectSpider()
     {
         buildManager.SetAnimalBuild(Spider);
     }
 
+    //Milih Snake
     public void SelectSnake()
     {
         buildManager.SetAnimalBuild(Snake);

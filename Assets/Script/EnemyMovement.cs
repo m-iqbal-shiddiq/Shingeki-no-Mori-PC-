@@ -29,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
         enemy.speed = enemy.startSpeed;
     }
 
+    // Jalan ke titik berikutnya
     void GetNextWay()
     {
         if (waveIndex >= Ways.points.Length - 1)
@@ -40,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
         target = Ways.points[waveIndex];
     }
 
+    // Dititik akhir hapus enemy
     void EndPath()
     {
         StatsPlayer.Lives--;

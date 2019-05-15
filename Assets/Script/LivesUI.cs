@@ -5,7 +5,7 @@ public class LivesUI : MonoBehaviour
 {
     public Text livesText;
     
-    // Update is called once per frame
+    // Update text nyawa
     void Update()
     {
         livesText.text = StatsPlayer.Lives + " LIVES";    
