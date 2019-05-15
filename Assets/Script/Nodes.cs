@@ -14,7 +14,6 @@ public class Nodes : MonoBehaviour
     public Color havenotGoldColor;
     private Renderer Rend;
     private Color startColor;
-    public Quaternion rotationOffset;
     public Vector3 positionOffset;
     BuildManager buildManager;
 
@@ -45,6 +44,7 @@ public class Nodes : MonoBehaviour
         GameObject bEffect = (GameObject)Instantiate(buildManager.buildEffect, GetAnimalPosition(), Quaternion.identity);
         Destroy(bEffect, 3f);
         Debug.Log("Hei" + StatsPlayer.Gold);
+        Debug.Log("posisi" + transform.position);
     }
 
     //Warna node saat pointer enter
