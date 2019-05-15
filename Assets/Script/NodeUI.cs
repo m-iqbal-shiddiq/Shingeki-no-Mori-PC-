@@ -10,15 +10,15 @@ public class NodeUI : MonoBehaviour
 
     public Text upgraedCost;
 
+    public Text sellCost;
+
     public Button upgradeButton;
 
     //milih node
     public void SetTarget(Nodes _target)
     {
         target= _target;
-
         transform.position = target.GetAnimalPosition();
-
         if (!target.isUpgraded)
         {
             upgraedCost.text = target.animalBlueprint.upgradeCost + "G";
@@ -28,9 +28,8 @@ public class NodeUI : MonoBehaviour
             upgraedCost.text = "OK";
             upgradeButton.interactable = false;
         }
-
+        sellCost.text = target.animalBlueprint.GetSellCost() + "G";
         ui.SetActive(true);
-
     }
 
     //hide panel  
@@ -43,6 +42,13 @@ public class NodeUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeAnimal();
+        BuildManager.instance.DeselectNode();
+    }
+
+    //jual animal
+    public void Sell()
+    {
+        target.SellAnimal();
         BuildManager.instance.DeselectNode();
     }
 }

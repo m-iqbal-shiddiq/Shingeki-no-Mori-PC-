@@ -9552,7 +9552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec2f9e55dd85b04791e27f47eb4352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   enemyTag: Enemy
   area: 10
   bonePrefab: {fileID: 0}
@@ -9563,6 +9562,8 @@ MonoBehaviour:
   useLaser: 1
   lineRenderer: {fileID: 6437743464869566971}
   laserImpact: {fileID: 878395118441846873}
+  damageOverTime: 30
+  slowPst: 0.5
 --- !u!120 &6437743464869566971
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -9623,7 +9624,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0.0894022, a: 1}
+      key0: {r: 0, g: 0.29826307, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

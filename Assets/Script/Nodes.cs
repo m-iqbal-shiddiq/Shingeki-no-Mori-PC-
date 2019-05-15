@@ -25,11 +25,13 @@ public class Nodes : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
+    //mendapatkan posisi dari Animal
     public Vector3 GetAnimalPosition()
     {
         return transform.position + positionOffset;
     }
 
+    //Memanggil animal
     void spawnAnimal(AnimalBlueprint blueprint)
     {
         if (StatsPlayer.Gold < blueprint.cost)
@@ -37,31 +39,25 @@ public class Nodes : MonoBehaviour
             return;
         }
         StatsPlayer.Gold -= blueprint.cost;
-
         GameObject _animal = (GameObject)Instantiate(blueprint.prefab, GetAnimalPosition(), Quaternion.identity);
         animal = _animal;
-
         animalBlueprint = blueprint;
-
         GameObject bEffect = (GameObject)Instantiate(buildManager.buildEffect, GetAnimalPosition(), Quaternion.identity);
-
         Destroy(bEffect, 3f);
-
         Debug.Log("Hei" + StatsPlayer.Gold);
     }
 
+    //Warna node saat pointer enter
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
-
         if (!buildManager.canBuild)
         {
             return;
         }
-
         if (buildManager.hasGold)
         {
             Rend.material.color = hoverColor;
@@ -71,27 +67,26 @@ public class Nodes : MonoBehaviour
         }
     }
 
+    //Warna node saat pointer melintas
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
-
         if (!buildManager.canBuild)
         {
             return;
         }
-
         if (animal != null)
         {
             buildManager.SelectNode(this);
             return;
         }
-
         spawnAnimal(buildManager.GetAnimaltoSpawn());
     }
 
+    //Melakukan upgrade animal
     public void UpgradeAnimal()
     {
         if (StatsPlayer.Gold < animalBlueprint.upgradeCost)
@@ -99,20 +94,27 @@ public class Nodes : MonoBehaviour
             return;
         }
         StatsPlayer.Gold -= animalBlueprint.upgradeCost;
-
         Destroy(animal);
-
         GameObject _animal = (GameObject)Instantiate(animalBlueprint.upgradedPrefab, GetAnimalPosition(), Quaternion.identity);
         animal = _animal;
-
         GameObject bEffect = (GameObject)Instantiate(buildManager.buildEffect, GetAnimalPosition(), Quaternion.identity);
-
         Destroy(bEffect, 3f);
         isUpgraded = true;
 
         Debug.Log("Upgrade");
     }
 
+    //Menjual animal
+    public void SellAnimal()
+    {
+        StatsPlayer.Gold += animalBlueprint.GetSellCost();
+        GameObject sEffect = (GameObject)Instantiate(buildManager.sellEffect, GetAnimalPosition(), Quaternion.identity);
+        Destroy(sEffect, 3f);
+        Destroy(animal);
+        animalBlueprint = null;
+    }
+
+    //Warna node saat pointer keluar
     private void OnMouseExit()
     {
         Rend.material.color = startColor;

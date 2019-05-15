@@ -849,6 +849,8 @@ MonoBehaviour:
     type: 3}
   buildEffect: {fileID: 3426727325540583333, guid: f72c341ef6867af449f26d8926713e5a,
     type: 3}
+  sellEffect: {fileID: 6287202370618004896, guid: 5252ffe297f90e7469c6f5c929d8635f,
+    type: 3}
   nodeUI: {fileID: 1460482443}
 --- !u!114 &284592381
 MonoBehaviour:
@@ -862,8 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3d968ea9866404d8af8a512a11ced4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGold: 2147483647
-  startLives: 1001
+  startGold: 1000
+  startLives: 1000
 --- !u!114 &284592382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4494,7 +4496,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1134655055}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460482443}
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1134655055
@@ -6200,6 +6213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1754564720}
   upgraedCost: {fileID: 1784753545}
+  sellCost: {fileID: 1696933811}
   upgradeButton: {fileID: 939510064}
 --- !u!4 &1483001603 stripped
 Transform:
@@ -6952,7 +6966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100G
+  m_Text: 50G
 --- !u!222 &1696933812
 CanvasRenderer:
   m_ObjectHideFlags: 0

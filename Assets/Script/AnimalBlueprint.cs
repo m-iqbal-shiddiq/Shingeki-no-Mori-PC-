@@ -10,4 +10,10 @@ public class AnimalBlueprint
 
     public GameObject upgradedPrefab;
     public int upgradeCost;
+
+    // Mendapat harga jual dari animal
+    public int GetSellCost()
+    {
+        return cost / 2;
+    }
 }

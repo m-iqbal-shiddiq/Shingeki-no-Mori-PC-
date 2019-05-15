@@ -4,6 +4,22 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
+    public GameObject GorillaPrefab;
+    public GameObject SnakePrefab;
+    public GameObject SpiderPrefab;
+
+    public GameObject buildEffect;
+    public GameObject sellEffect;
+
+    private AnimalBlueprint animalToSpawn;
+
+    private Nodes selectedNode;
+
+    public NodeUI nodeUI; 
+
+    public bool canBuild { get { return animalToSpawn != null;  } }
+    public bool hasGold { get { return StatsPlayer.Gold >= animalToSpawn.cost; } }
+
     private void Awake()
     {
         if (instance != null)
@@ -13,21 +29,8 @@ public class BuildManager : MonoBehaviour
         instance = this;
 
     }
-    public GameObject GorillaPrefab;
 
-    public GameObject SnakePrefab;
-    public GameObject SpiderPrefab;
-
-    public GameObject buildEffect;
-
-    private AnimalBlueprint animalToSpawn;
-    private Nodes selectedNode;
-
-    public NodeUI nodeUI; 
-
-    public bool canBuild { get { return animalToSpawn != null;  } }
-    public bool hasGold { get { return StatsPlayer.Gold >= animalToSpawn.cost; } }
-    
+    // Memilih node yang akan dipanggi animal
     public void SelectNode(Nodes node)
     {
         if (selectedNode == node)
@@ -42,18 +45,21 @@ public class BuildManager : MonoBehaviour
         
     }
     
+    // Melakukan set animal
     public void SetAnimalBuild(AnimalBlueprint animal)
     {
         animalToSpawn = animal;
         DeselectNode();
     }
 
+    // Tidak memilih node
     public void DeselectNode()
     {
         selectedNode = null;
         nodeUI.Hide();
     }
 
+    // Mengembalikan animal yang akan dipanggil
     public AnimalBlueprint GetAnimaltoSpawn()
     {
         return animalToSpawn;
