@@ -24,6 +24,9 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+        /*if (GameManager.GameIsOver)
+            return;*/
+
     }
 
     public void Retry()
