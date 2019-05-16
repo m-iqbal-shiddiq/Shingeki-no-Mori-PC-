@@ -47,6 +47,8 @@ public class Enemy : MonoBehaviour
         GameObject effect = Instantiate(deadeff, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
 
+        SpawnWave.enemyisAlive--;
+
         Destroy(gameObject);
     }
 }
