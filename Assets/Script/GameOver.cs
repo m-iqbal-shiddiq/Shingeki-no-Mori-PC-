@@ -3,8 +3,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
-
     public Text roundsText;
+
+    public string sceneName;
+
+    public SceneFader sceneFader;
 
     //fungsi saat object diaktifkan
     private void OnEnable()
@@ -15,13 +18,13 @@ public class GameOver : MonoBehaviour
     //fungsi retry
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     //fungsi menu
 
     public void Menu()
     {
-        Debug.Log("Menu");
+        sceneFader.FadeTo(sceneName);
     }
 }
