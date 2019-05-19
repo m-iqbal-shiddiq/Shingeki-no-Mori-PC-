@@ -18,13 +18,14 @@ public class SpawnWave : MonoBehaviour
 
     public Text waveText;
 
+    public GameManager gameManager;
     private void Update()
     {
         if(enemyisAlive > 0)
         {
             return;
         }
-
+        // buat wave kalo satu wave udah kelar
         if(countdown <= 0f)
         {
             StartCoroutine(Spawn());
@@ -41,6 +42,8 @@ public class SpawnWave : MonoBehaviour
     {
         StatsPlayer.Wave++;
         Wave wave = waves[numberWave];
+
+        enemyisAlive = wave.count;
         for (int i = 0; i < wave.count; i++)
         {
             EnemySpawn(wave.enemy);
@@ -49,7 +52,7 @@ public class SpawnWave : MonoBehaviour
         numberWave++;
         if(numberWave == waves.Length)
         {
-            Debug.Log("YOU WIN!");
+            gameManager.WinLevel();
             this.enabled = false;
         }
     }
@@ -58,6 +61,5 @@ public class SpawnWave : MonoBehaviour
     void EnemySpawn(GameObject enemy)
     {
         Instantiate(enemy, pointSpawn.position, pointSpawn.rotation);
-        enemyisAlive++;
     }
 }

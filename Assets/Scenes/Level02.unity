@@ -825,8 +825,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: []
   pointSpawn: {fileID: 1987976247}
-  selangWave: 10
+  selangWave: 0
   waveText: {fileID: 1993964933}
+  gameManager: {fileID: 284592382}
 --- !u!4 &284592379
 Transform:
   m_ObjectHideFlags: 0
@@ -877,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGold: 1000
-  startLives: 10
+  startLives: 1
 --- !u!114 &284592382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,6 +892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameoverUI: {fileID: 2114267538}
+  nextLevel: Level02
+  leveltoUnlock: 2
+  sceneFader: {fileID: 118807418}
 --- !u!95 &284592383
 Animator:
   serializedVersion: 3
