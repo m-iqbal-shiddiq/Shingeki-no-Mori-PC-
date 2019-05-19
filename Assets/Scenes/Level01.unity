@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: []
   pointSpawn: {fileID: 1987976247}
-  selangWave: 0
+  selangWave: 1
   waveText: {fileID: 1993964933}
   gameManager: {fileID: 284592382}
 --- !u!4 &284592379

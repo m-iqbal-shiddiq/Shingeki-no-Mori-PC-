@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGold: 1000
-  startLives: 1
+  startLives: 10
 --- !u!114 &284592382
 MonoBehaviour:
   m_ObjectHideFlags: 0

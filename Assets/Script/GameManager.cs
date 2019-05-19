@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void WinLevel()
     {
         Debug.Log("Level Won");
+        GameisOver = true;
         PlayerPrefs.SetInt("levelReached",leveltoUnlock); // simpan progress ke playerprefs
         sceneFader.FadeTo(nextLevel); //lanjut scene selanjutnya
     }

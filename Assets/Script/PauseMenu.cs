@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public SceneFader sceneFader;
 
     public string sceneName;
+    
 
     private void Update()
     {
@@ -29,8 +30,7 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-        /*if (GameManager.GameIsOver)
-            return;*/
+        
     }
 
     public void Retry()
