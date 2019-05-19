@@ -74,15 +74,16 @@ public class Nodes : MonoBehaviour
         {
             return;
         }
-        if (!buildManager.canBuild)
-        {
-            return;
-        }
         if (animal != null)
         {
             buildManager.SelectNode(this);
             return;
         }
+        if (!buildManager.canBuild)
+        {
+            return;
+        }
+       
         spawnAnimal(buildManager.GetAnimaltoSpawn());
     }
 

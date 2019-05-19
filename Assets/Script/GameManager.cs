@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         GameisOver = true;
-        Debug.Log("and I am Iron Man");
         gameoverUI.SetActive(true);
     }
 }

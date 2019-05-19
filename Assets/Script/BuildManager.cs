@@ -40,18 +40,9 @@ public class BuildManager : MonoBehaviour
         }
         selectedNode = node;
         animalToSpawn = null;
-
         nodeUI.SetTarget(node);
         
     }
-    
-    // Melakukan set animal
-    public void SetAnimalBuild(AnimalBlueprint animal)
-    {
-        animalToSpawn = animal;
-        DeselectNode();
-    }
-
     // Tidak memilih node
     public void DeselectNode()
     {
@@ -59,6 +50,14 @@ public class BuildManager : MonoBehaviour
         nodeUI.Hide();
     }
 
+    // Melakukan set animal
+    public void SetAnimalBuild(AnimalBlueprint animal)
+    {
+        animalToSpawn = animal;
+        DeselectNode();
+    }
+
+    
     // Mengembalikan animal yang akan dipanggil
     public AnimalBlueprint GetAnimaltoSpawn()
     {
