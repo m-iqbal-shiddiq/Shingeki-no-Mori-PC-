@@ -25,8 +25,15 @@ public class SpawnWave : MonoBehaviour
         {
             return;
         }
+
+        if (numberWave == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
+
         // buat wave kalo satu wave udah kelar
-        if(countdown <= 0f)
+        if (countdown <= 0f)
         {
             StartCoroutine(Spawn());
             countdown = selangWave;
@@ -50,11 +57,7 @@ public class SpawnWave : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.rate);
         }
         numberWave++;
-        if(numberWave == waves.Length)
-        {
-            gameManager.WinLevel();
-            this.enabled = false;
-        }
+        
     }
 
     // Memanggil Enemy

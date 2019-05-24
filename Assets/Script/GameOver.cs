@@ -3,18 +3,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
-    public Text roundsText;
 
     public string sceneName;
 
     public SceneFader sceneFader;
 
-    //fungsi saat object diaktifkan
-    private void OnEnable()
-    {
-        roundsText.text = StatsPlayer.Wave.ToString();
-    }
-
+   
     //fungsi retry
     public void Retry()
     {
