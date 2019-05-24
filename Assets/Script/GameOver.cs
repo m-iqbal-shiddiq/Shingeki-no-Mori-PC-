@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class GameOver : MonoBehaviour
 {
-
-    public string sceneName;
-
+    public string nameScene = "MainMenu";
     public SceneFader sceneFader;
 
-   
     //fungsi retry
     public void Retry()
     {
@@ -19,6 +17,6 @@ public class GameOver : MonoBehaviour
 
     public void Menu()
     {
-        sceneFader.FadeTo(sceneName);
+        sceneFader.FadeTo(nameScene);
     }
 }

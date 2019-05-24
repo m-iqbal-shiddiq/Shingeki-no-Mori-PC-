@@ -31,6 +31,7 @@ public class SceneFader : MonoBehaviour
     // Fade Out akhir game
     IEnumerator FadeOut(string scene)
     {
+        Debug.Log(scene);
         float t = 1f;
         while (t < 1f)
         {

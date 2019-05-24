@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 655570103}
   sceneFader: {fileID: 118807418}
-  sceneName: 
+  sceneName: MainMenu
 --- !u!1001 &305336477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5972,7 +5972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 630460695}
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
@@ -10290,7 +10290,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -11095,7 +11095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3196c2476a2cd4f9220dc471abcd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  nameScene: MainMenu
   sceneFader: {fileID: 118807418}
 --- !u!95 &2114267541
 Animator:

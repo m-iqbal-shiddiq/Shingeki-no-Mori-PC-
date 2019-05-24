@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CompleteLevel : MonoBehaviour
 {
-    public string sceneName;
+    public string sceneName = "MainMenu";
 
     public SceneFader sceneFader;
 
