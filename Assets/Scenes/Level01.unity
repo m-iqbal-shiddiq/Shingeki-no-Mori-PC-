@@ -2179,8 +2179,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Retry
+      - m_Target: {fileID: 630460695}
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2580,6 +2580,7 @@ MonoBehaviour:
   sceneFader: {fileID: 118807418}
   nextLevel: Level02
   leveltoUnlock: 2
+  nameScene: MainMenu
 --- !u!1001 &641871940
 PrefabInstance:
   m_ObjectHideFlags: 0

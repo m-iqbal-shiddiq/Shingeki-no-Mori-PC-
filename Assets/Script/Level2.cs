@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level2 : MonoBehaviour
 {
     public void Menu(string nameScene)
     {
-        Application.LoadLevel(nameScene);
+        SceneManager.LoadScene(nameScene);
     }
 }
