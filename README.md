@@ -34,6 +34,7 @@ Target *user* adalah :
 ## Code
 ### Animal
 <img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Sampel%20Kode/Screenshot_2019-05-25%20miqbals1649%20Shingeki-no-Mori-PC-(2).png">
+
 ### Enemy
 <img src="https://raw.githubusercontent.com/miqbals1649/Shingeki-no-Mori-PC-/master/Dokumentasi/Sampel%20Kode/Screenshot_2019-05-25%20miqbals1649%20Shingeki-no-Mori-PC-.png">
 
